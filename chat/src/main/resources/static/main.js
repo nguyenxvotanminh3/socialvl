@@ -23,7 +23,7 @@ function connect(event) {
       usernamePage.classList.add('hidden');
       chatPage.classList.remove('hidden');
 
-      var socket = new SockJS('/ws');
+      var socket = new SockJS('ws://9d19-123-21-101-151.ngrok-free.app');
       stompClient = Stomp.over(socket);
 
       stompClient.connect({}, onConnected, onError);
